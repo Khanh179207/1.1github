@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giới thiệu - Nguyễn Văn A</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config (optional) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5a4', /* teal-500 */
+            accent: '#06b6d4'   /* cyan-500 */
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Basic meta for SEO / social preview -->
+  <meta name="description" content="Trang giới thiệu cá nhân - Nguyễn Văn A. Developer, designer và đam mê công nghệ.">
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- NAV -->
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <!-- logo circle -->
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold">NV</div>
+          <div>
+            <p class="font-semibold">Nguyễn Văn A</p>
+            <p class="text-xs text-gray-500">Front-end &amp; Java Developer</p>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:text-primary">Giới thiệu</a>
+          <a href="#skills" class="hover:text-primary">Kỹ năng</a>
+          <a href="#projects" class="hover:text-primary">Dự án</a>
+          <a href="#contact" class="hover:text-primary">Liên hệ</a>
+        </nav>
+
+        <div class="md:hidden">
+          <!-- simple mobile menu button -->
+          <button id="menuBtn" class="p-2 rounded-md hover:bg-gray-100" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-gray-100">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#about" class="block">Giới thiệu</a>
+        <a href="#skills" class="block">Kỹ năng</a>
+        <a href="#projects" class="block">Dự án</a>
+        <a href="#contact" class="block">Liên hệ</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- HERO -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Left: Text -->
+      <div class="md:col-span-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+          Xin chào, tôi là <span class="text-primary">Nguyễn Văn A</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl">
+          Tôi là lập trình viên front-end &amp; Java, thích xây dựng giao diện người dùng đẹp, tối ưu trải nghiệm và code sạch. Hiện tập trung vào React, Vue, và Java backend.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg shadow-sm hover:opacity-95">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v5a1 1 0 11-2 0V5H4v10h6a1 1 0 110 2H4a2 2 0 01-2-2V5z"/><path d="M16 13a1 1 0 00-1 1v1H9a1 1 0 100 2h7a2 2 0 002-2v-2a1 1 0 00-1-1z"/></svg>
+            Xem dự án
+          </a>
+
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50">
+            Liên hệ
+          </a>
+        </div>
+
+        <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+          <div>
+            <dt class="text-gray-500">Kinh nghiệm</dt>
+            <dd class="font-semibold">3+ năm</dd>
+          </div>
+          <div>
+            <dt class="text-gray-500">Sở thích</dt>
+            <dd class="font-semibold">UI, Game Dev</dd>
+          </div>
+          <div>
+            <dt class="text-gray-500">Đang dùng</dt>
+            <dd class="font-semibold">React, Vue, Java</dd>
+          </div>
+          <div>
+            <dt class="text-gray-500">Ngôn ngữ</dt>
+            <dd class="font-semibold">Việt / English</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Right: Avatar card -->
+      <aside class="bg-white rounded-2xl p-6 shadow-sm flex flex-col items-center text-center">
+        <img src="https://placehold.co/180x180/png?text=Avatar" alt="Ảnh đại diện" class="w-36 h-36 rounded-full object-cover ring-4 ring-white shadow-md">
+        <h3 class="mt-4 font-semibold">Nguyễn Văn A</h3>
+        <p class="text-sm text-gray-500">Front-end &amp; Java Developer</p>
+
+        <div class="mt-4 flex gap-3">
+          <a href="#" class="text-gray-500 hover:text-primary" aria-label="GitHub profile" title="GitHub">
+            <!-- GitHub icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.74.81 1.19 1.84 1.19 3.1 0 4.42-2.71 5.4-5.29 5.68.41.35.77 1.03.77 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.66.79.55C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-primary" aria-label="LinkedIn profile" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66h-3.55V9h3.41v1.56h.05c.48-.91 1.65-1.86 3.39-1.86 3.63 0 4.3 2.39 4.3 5.48v6.75zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM6.96 20.45H3.7V9h3.26v11.45z"/></svg>
+          </a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mt-12 bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-xl font-semibold">Giới thiệu</h2>
+      <p class="mt-3 text-gray-600">
+        Tôi tốt nghiệp ngành Công nghệ thông tin. Đã tham gia phát triển nhiều dự án web thương mại điện tử, dashboard quản trị và ứng dụng nội bộ. Tôi ưu tiên code có cấu trúc, testable, và thân thiện khi bảo trì.
+      </p>
+      <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <li class="flex gap-3 items-start">
+          <span class="mt-1 inline-flex items-center justify-center w-8 h-8 rounded bg-gray-100">🎯</span>
+          <div>
+            <div class="font-medium">Mục tiêu</div>
+            <div class="text-gray-500">Trở thành Senior Frontend Engineer, học thêm kiến trúc hệ thống.</div>
+          </div>
+        </li>
+        <li class="flex gap-3 items-start">
+          <span class="mt-1 inline-flex items-center justify-center w-8 h-8 rounded bg-gray-100">🛠️</span>
+          <div>
+            <div class="font-medium">Công cụ</div>
+            <div class="text-gray-500">VSCode, Git, Docker, Postman.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mt-8">
+      <h2 class="text-xl font-semibold">Kỹ năng</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <!-- skill pill -->
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">HTML</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">CSS / Tailwind</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">JavaScript</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">React</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">Vue</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">Java / Spring</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">SQL</span>
+        <span class="px-3 py-1 rounded-full bg-white shadow-sm border text-sm">Git</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-8">
+      <h2 class="text-xl font-semibold">Dự án tiêu biểu</h2>
+
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card -->
+        <article class="bg-white rounded-lg shadow-sm p-4">
+          <h3 class="font-medium">Tuda Clothes</h3>
+          <p class="text-sm text-gray-500 mt-2">Web thương mại điện tử: giỏ hàng, thanh toán, và dashboard quản trị.</p>
+          <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <span>React • Node</span>
+            <a href="#" class="hover:text-primary">Chi tiết →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm p-4">
+          <h3 class="font-medium">QL Nhà Trọ</h3>
+          <p class="text-sm text-gray-500 mt-2">Hệ thống quản lý đăng tin nhà trọ, tìm kiếm theo khu vực.</p>
+          <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <span>Java • SQL</span>
+            <a href="#" class="hover:text-primary">Chi tiết →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm p-4">
+          <h3 class="font-medium">App học tiếng Anh</h3>
+          <p class="text-sm text-gray-500 mt-2">Ứng dụng học ngắn có gamification và lưu tiến trình.</p>
+          <div class="mt-3 flex items-center justify-between text-xs text-gray-500">
+            <span>Vue • Firebase</span>
+            <a href="#" class="hover:text-primary">Chi tiết →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-8 bg-white rounded-2xl p-6 shadow-sm">
+      <h2 class="text-xl font-semibold">Liên hệ</h2>
+      <p class="mt-2 text-sm text-gray-600">Bạn muốn hợp tác, trao đổi dự án hoặc cần CV? Gửi tin nhắn cho tôi.</p>
+
+      <form class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4" onsubmit="event.preventDefault(); alert('Gửi mẫu (demo)');">
+        <input class="md:col-span-2 p-3 rounded border" type="text" placeholder="Họ tên" required>
+        <input class="p-3 rounded border" type="email" placeholder="Email" required>
+        <textarea class="md:col-span-3 p-3 rounded border" rows="4" placeholder="Nội dung" required></textarea>
+        <button class="md:col-span-3 inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent text-white rounded-lg">Gửi tin nhắn</button>
+      </form>
+
+      <div class="mt-6 text-sm text-gray-500">
+        <p><strong>Email:</strong> <a href="mailto:nguyenvana@example.com" class="hover:text-primary">nguyenvana@example.com</a></p>
+        <p class="mt-1"><strong>SĐT:</strong> 0123-456-789</p>
+      </div>
+    </section>
+
+    <footer class="mt-12 text-center text-sm text-gray-500">
+      © <span id="year"></span> Nguyễn Văn A • Đã tạo bằng Tailwind CSS
+    </footer>
+
+  </main>
+
+  <script>
+    // small script for mobile nav toggle and current year
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
